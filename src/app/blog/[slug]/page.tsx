@@ -48,7 +48,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <article className="section-padding">
+      <article className="pt-8 pb-20 md:pt-12 md:pb-28">
         <div className="container-custom max-w-3xl">
           {/* Back link */}
           <Link

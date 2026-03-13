@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
-    <div className="section-padding">
+    <div className="pt-8 pb-20 md:pt-12 md:pb-28">
       <div className="container-custom max-w-4xl">
         <SectionHeading
           title="Let's Connect"

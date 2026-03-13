@@ -14,7 +14,7 @@ export default function BlogPage() {
   const tags = getAllTags();
 
   return (
-    <div className="section-padding">
+    <div className="pt-8 pb-20 md:pt-12 md:pb-28">
       <div className="container-custom">
         <SectionHeading
           title="Technical Blog"
