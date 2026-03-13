@@ -53,7 +53,9 @@
     "Caching & Queues": ["Redis", "Laravel Horizon", "Async Job Processing"],
     "Architecture": ["Multi-Tenant SaaS", "REST APIs", "Domain-Driven Design", "Microservices", "Service-Repository Pattern"],
     "DevOps": ["AWS", "Docker", "Git", "CI/CD", "Cloudflare"],
-    "Integrations": ["Acumatica ERP", "Payment Gateways", "Shipping APIs", "SendGrid", "Klaviyo"]
+    "Integrations & APIs": ["Acumatica ERP", "Stripe", "Ebiz", "Twilio", "Google Maps", "Google Merchant Center", "Google Search Console", "Honeypot"],
+    "Email & Marketing": ["Postmark", "SendGrid", "Klaviyo", "HubSpot", "BounceBan"],
+    "Project Management": ["Jira", "ClickUp", "Bitrix24"]
   },
   "education": {
     "degree": "B.Tech in Mechanical Engineering",

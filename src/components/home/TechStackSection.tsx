@@ -13,7 +13,9 @@ const categoryIcons: Record<string, string> = {
   "Caching & Queues": "bolt",
   "Architecture": "building",
   "DevOps": "cloud",
-  "Integrations": "link",
+  "Integrations & APIs": "link",
+  "Email & Marketing": "mail",
+  "Project Management": "clipboard",
 };
 
 export default function TechStackSection() {
