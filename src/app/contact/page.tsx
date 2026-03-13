@@ -1,16 +1,33 @@
 import type { Metadata } from "next";
 import SectionHeading from "@/components/shared/SectionHeading";
 import ContactForm from "@/components/contact/ContactForm";
+import { generateBreadcrumbJsonLd } from "@/lib/seo";
 import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
   title: "Contact",
   description: "Get in touch with Abhay Pratap Singh — Senior Backend Engineer & Team Lead.",
+  alternates: {
+    canonical: `${siteConfig.url}/contact`,
+  },
 };
 
 export default function ContactPage() {
+  const breadcrumb = {
+    "@context": "https://schema.org",
+    ...generateBreadcrumbJsonLd([
+      { name: "Home", url: siteConfig.url },
+      { name: "Contact", url: `${siteConfig.url}/contact` },
+    ]),
+  };
+
   return (
-    <div className="pt-8 pb-20 md:pt-12 md:pb-28">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }}
+      />
+      <div className="pt-8 pb-20 md:pt-12 md:pb-28">
       <div className="container-custom max-w-4xl">
         <SectionHeading
           title="Let's Connect"
@@ -93,5 +110,6 @@ export default function ContactPage() {
         </div>
       </div>
     </div>
+    </>
   );
 }

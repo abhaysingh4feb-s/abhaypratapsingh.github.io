@@ -12,10 +12,11 @@ export default function Footer() {
   return (
     <footer className="border-t border-[var(--border)]">
       <div className="container-custom py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
-        {/* Left — copyright */}
-        <p className="text-xs text-[var(--text-muted)]">
-          &copy; {new Date().getFullYear()} {siteConfig.name}
-        </p>
+        {/* Left — copyright + name */}
+        <div className="text-xs text-[var(--text-muted)]">
+          <p>&copy; {new Date().getFullYear()} {siteConfig.name}</p>
+          <p className="mt-0.5">{siteConfig.title}</p>
+        </div>
 
         {/* Center — nav links */}
         <div className="flex items-center gap-5">

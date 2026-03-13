@@ -21,6 +21,7 @@ export default function HeroSection() {
         >
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
             <span className="gradient-text">{siteConfig.name}</span>
+            <span className="sr-only"> — Senior Backend Engineer & Team Lead, India</span>
           </h1>
 
           <motion.p

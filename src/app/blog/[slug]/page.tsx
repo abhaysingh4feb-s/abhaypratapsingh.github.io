@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getAllPosts, getPostBySlug } from "@/lib/blog";
-import { generateBlogPostingJsonLd } from "@/lib/seo";
+import { generateBlogPostingJsonLd, generateBreadcrumbJsonLd } from "@/lib/seo";
+import { siteConfig } from "@/config/site";
 import Badge from "@/components/shared/Badge";
 
 interface BlogPostPageProps {
@@ -23,12 +24,24 @@ export async function generateMetadata({
   return {
     title: post.title,
     description: post.excerpt,
+    alternates: {
+      canonical: `${siteConfig.url}/blog/${params.slug}`,
+    },
     openGraph: {
       title: post.title,
       description: post.excerpt,
       type: "article",
       publishedTime: post.date,
       tags: post.tags,
+      authors: [siteConfig.name],
+      images: [{ url: siteConfig.ogImage, width: 1200, height: 630 }],
+      url: `${siteConfig.url}/blog/${params.slug}`,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.excerpt,
+      images: [siteConfig.ogImage],
     },
   };
 }
@@ -41,12 +54,24 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   }
 
   const jsonLd = generateBlogPostingJsonLd(post);
+  const breadcrumb = {
+    "@context": "https://schema.org",
+    ...generateBreadcrumbJsonLd([
+      { name: "Home", url: siteConfig.url },
+      { name: "Blog", url: `${siteConfig.url}/blog` },
+      { name: post.title, url: `${siteConfig.url}/blog/${post.slug}` },
+    ]),
+  };
 
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }}
       />
       <article className="pt-8 pb-20 md:pt-12 md:pb-28">
         <div className="container-custom max-w-3xl">
@@ -73,6 +98,8 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               </time>
               <span>&middot;</span>
               <span>{post.readingTime} min read</span>
+              <span>&middot;</span>
+              <span>By {siteConfig.name}</span>
             </div>
 
             <h1 className="text-3xl md:text-4xl font-bold leading-tight">

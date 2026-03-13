@@ -2,49 +2,49 @@
 <rss version="2.0">
     <channel>
         <title>Abhay Pratap Singh — Senior Backend Engineer &amp; Team Lead</title>
-        <link>https://abhaypratapsingh.vercel.app</link>
+        <link>https://abhaypratapsingh.co.in</link>
         <description>Backend engineer building scalable SaaS platforms and AI-powered systems</description>
-        <lastBuildDate>Fri, 13 Mar 2026 04:24:35 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 13 Mar 2026 17:00:44 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
         <copyright>All rights reserved 2026, Abhay Pratap Singh</copyright>
         <item>
             <title><![CDATA[How I Design Systems: My Engineering Philosophy]]></title>
-            <link>https://abhaypratapsingh.vercel.app/blog/how-i-design-systems</link>
-            <guid isPermaLink="false">https://abhaypratapsingh.vercel.app/blog/how-i-design-systems</guid>
+            <link>https://abhaypratapsingh.co.in/blog/how-i-design-systems</link>
+            <guid isPermaLink="false">https://abhaypratapsingh.co.in/blog/how-i-design-systems</guid>
             <pubDate>Mon, 01 Dec 2025 00:00:00 GMT</pubDate>
             <description><![CDATA[The principles behind my architecture decisions — from monolith vs microservices to multi-tenant isolation and LLM integration.]]></description>
             <author>abhaysingh4feb@gmail.com (Abhay Pratap Singh)</author>
         </item>
         <item>
             <title><![CDATA[Designing a Secure LLM-to-SQL Pipeline]]></title>
-            <link>https://abhaypratapsingh.vercel.app/blog/llm-to-sql-pipeline</link>
-            <guid isPermaLink="false">https://abhaypratapsingh.vercel.app/blog/llm-to-sql-pipeline</guid>
+            <link>https://abhaypratapsingh.co.in/blog/llm-to-sql-pipeline</link>
+            <guid isPermaLink="false">https://abhaypratapsingh.co.in/blog/llm-to-sql-pipeline</guid>
             <pubDate>Sat, 15 Nov 2025 00:00:00 GMT</pubDate>
             <description><![CDATA[How I built a natural language to SQL system that handles prompt injection, schema validation, and query sandboxing — processing 20M+ records in production.]]></description>
             <author>abhaysingh4feb@gmail.com (Abhay Pratap Singh)</author>
         </item>
         <item>
             <title><![CDATA[Building Semantic Search with PostgreSQL and pgvector]]></title>
-            <link>https://abhaypratapsingh.vercel.app/blog/rag-with-postgresql-pgvector</link>
-            <guid isPermaLink="false">https://abhaypratapsingh.vercel.app/blog/rag-with-postgresql-pgvector</guid>
+            <link>https://abhaypratapsingh.co.in/blog/rag-with-postgresql-pgvector</link>
+            <guid isPermaLink="false">https://abhaypratapsingh.co.in/blog/rag-with-postgresql-pgvector</guid>
             <pubDate>Mon, 20 Oct 2025 00:00:00 GMT</pubDate>
             <description><![CDATA[Why I chose pgvector over dedicated vector databases, and how to implement production-grade semantic search without leaving PostgreSQL.]]></description>
             <author>abhaysingh4feb@gmail.com (Abhay Pratap Singh)</author>
         </item>
         <item>
             <title><![CDATA[Multi-Tenant Architecture: Row-Level vs Schema-Level Isolation]]></title>
-            <link>https://abhaypratapsingh.vercel.app/blog/multi-tenant-architecture-isolation</link>
-            <guid isPermaLink="false">https://abhaypratapsingh.vercel.app/blog/multi-tenant-architecture-isolation</guid>
+            <link>https://abhaypratapsingh.co.in/blog/multi-tenant-architecture-isolation</link>
+            <guid isPermaLink="false">https://abhaypratapsingh.co.in/blog/multi-tenant-architecture-isolation</guid>
             <pubDate>Wed, 10 Sep 2025 00:00:00 GMT</pubDate>
             <description><![CDATA[A practical comparison of tenant isolation strategies, and why row-level isolation with middleware-based context propagation worked for our 100+ tenant platform.]]></description>
             <author>abhaysingh4feb@gmail.com (Abhay Pratap Singh)</author>
         </item>
         <item>
             <title><![CDATA[Orchestrating 20+ Third-Party APIs Without Losing Your Mind]]></title>
-            <link>https://abhaypratapsingh.vercel.app/blog/third-party-api-orchestration</link>
-            <guid isPermaLink="false">https://abhaypratapsingh.vercel.app/blog/third-party-api-orchestration</guid>
+            <link>https://abhaypratapsingh.co.in/blog/third-party-api-orchestration</link>
+            <guid isPermaLink="false">https://abhaypratapsingh.co.in/blog/third-party-api-orchestration</guid>
             <pubDate>Tue, 05 Aug 2025 00:00:00 GMT</pubDate>
             <description><![CDATA[Lessons from integrating ERP, shipping, marketing, and payment APIs into a single e-commerce platform.]]></description>
             <author>abhaysingh4feb@gmail.com (Abhay Pratap Singh)</author>

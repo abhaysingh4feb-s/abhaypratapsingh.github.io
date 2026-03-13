@@ -1,7 +1,9 @@
+import type { Metadata } from "next";
 import dynamic from "next/dynamic";
 import { getAllProjects } from "@/lib/projects";
 import { getAllPosts } from "@/lib/blog";
-import { generatePersonJsonLd } from "@/lib/seo";
+import { generateHomePageJsonLdGraph } from "@/lib/seo";
+import { siteConfig } from "@/config/site";
 import HeroSection from "@/components/home/HeroSection";
 import SpecializationsSection from "@/components/home/SpecializationsSection";
 import AboutSection from "@/components/home/AboutSection";
@@ -32,16 +34,31 @@ const ContactCTA = dynamic(
   { ssr: true }
 );
 
+export const metadata: Metadata = {
+  title: `${siteConfig.name} — ${siteConfig.title}`,
+  description: siteConfig.description,
+  alternates: {
+    canonical: siteConfig.url,
+  },
+  openGraph: {
+    type: "profile",
+    title: `${siteConfig.name} — ${siteConfig.title}`,
+    description: siteConfig.description,
+    url: siteConfig.url,
+    images: [{ url: siteConfig.ogImage, width: 1200, height: 630 }],
+  },
+};
+
 export default function HomePage() {
   const projects = getAllProjects();
   const posts = getAllPosts();
-  const personJsonLd = generatePersonJsonLd();
+  const jsonLdGraph = generateHomePageJsonLdGraph();
 
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdGraph) }}
       />
       <HeroSection />
       <SpecializationsSection />
