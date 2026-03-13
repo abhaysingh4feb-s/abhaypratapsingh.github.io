@@ -1,0 +1,116 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+@layer base {
+  :root {
+    --bg-primary: #ffffff;
+    --bg-secondary: #f8fafc;
+    --bg-card: #ffffff;
+    --text-primary: #0f172a;
+    --text-secondary: #475569;
+    --text-muted: #94a3b8;
+    --border: #e2e8f0;
+    --card-border: #e2e8f0;
+    --card-glow: rgba(59, 130, 246, 0.1);
+  }
+
+  .dark {
+    --bg-primary: #0a0f1c;
+    --bg-secondary: #0f1629;
+    --bg-card: #161d35;
+    --text-primary: #f1f5f9;
+    --text-secondary: #94a3b8;
+    --text-muted: #64748b;
+    --border: #1e2742;
+    --card-border: #1e2742;
+    --card-glow: rgba(59, 130, 246, 0.15);
+  }
+
+  body {
+    @apply bg-[var(--bg-primary)] text-[var(--text-primary)] transition-colors duration-300;
+  }
+
+  ::selection {
+    @apply bg-blue-500/30 text-blue-100;
+  }
+}
+
+@layer components {
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-purple-500 to-cyan-500;
+    background-size: 200% auto;
+  }
+
+  .glass-card {
+    @apply bg-[var(--bg-card)] border border-[var(--card-border)] rounded-xl backdrop-blur-sm;
+    @apply hover:border-blue-500/30 hover:shadow-lg hover:shadow-blue-500/5 transition-all duration-300;
+  }
+
+  .gradient-border {
+    @apply relative;
+  }
+
+  .gradient-border::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-blue-500 via-purple-500 to-cyan-500;
+    @apply scale-x-0 transition-transform duration-300 origin-left;
+  }
+
+  .gradient-border:hover::after {
+    @apply scale-x-100;
+  }
+
+  .section-padding {
+    @apply py-20 md:py-28;
+  }
+
+  .container-custom {
+    @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center gap-2 px-6 py-3 rounded-lg font-medium text-white;
+    @apply bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500;
+    @apply transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center gap-2 px-6 py-3 rounded-lg font-medium;
+    @apply border border-[var(--card-border)] text-[var(--text-primary)];
+    @apply hover:border-blue-500/50 hover:bg-blue-500/5 transition-all duration-300;
+  }
+}
+
+/* Syntax highlighting overrides for dark mode */
+.dark pre code.hljs {
+  background: transparent;
+}
+
+pre code.hljs {
+  @apply rounded-lg;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-[var(--bg-secondary)];
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-[var(--text-muted)] rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-[var(--text-secondary)];
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}

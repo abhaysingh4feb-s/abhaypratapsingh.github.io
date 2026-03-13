@@ -1,0 +1,71 @@
+{
+  "name": "Abhay Pratap Singh",
+  "title": "Senior Backend Engineer & Team Lead",
+  "email": "abhaysingh4feb@gmail.com",
+  "phone": "+91-8299641416",
+  "linkedin": "https://www.linkedin.com/in/abhay-pratap-singhh/",
+  "summary": "Senior Backend Engineer and Team Lead with 5+ years of experience leading cross-functional overseas teams while architecting scalable multi-tenant SaaS platforms and AI-integrated systems.",
+  "experience": [
+    {
+      "company": "Voyantt Consultancy Services LLP",
+      "location": "India",
+      "role": "Tech Lead",
+      "period": "Nov 2025 – Present",
+      "highlights": [
+        "Leading architecture decisions and technical direction across multiple products",
+        "Driving engineering standards, code review culture, and sprint planning",
+        "Mentoring developers and conducting technical interviews",
+        "Designing AI-powered analytics systems with LLM-to-SQL pipelines and vector search",
+        "Owning cross-functional collaboration with overseas stakeholders and product teams"
+      ]
+    },
+    {
+      "company": "Voyantt Consultancy Services LLP",
+      "location": "India",
+      "role": "Senior Software Developer",
+      "period": "May 2025 – Oct 2025",
+      "highlights": [
+        "Architected the AI Call Intelligence Platform processing 20M+ call records",
+        "Built LLM-to-SQL pipeline with GPT-4o Mini and pgvector semantic search",
+        "Engineered Redis caching strategy achieving ~60% latency improvement",
+        "Implemented prompt injection prevention and query sandboxing for AI features",
+        "Reduced API p95 latency by 35% through query optimization and caching"
+      ]
+    },
+    {
+      "company": "Voyantt Consultancy Services LLP",
+      "location": "India",
+      "role": "Software Developer",
+      "period": "Apr 2021 – Apr 2025",
+      "highlights": [
+        "Built multi-tenant SaaS platform with row-level PostgreSQL isolation serving 100+ organizations",
+        "Designed and implemented 30+ modular NestJS domains with RBAC and subscription enforcement",
+        "Developed multi-vendor healthcare e-commerce platform spanning US and Canada in 7 languages",
+        "Orchestrated 20+ third-party API integrations including Acumatica ERP with retry logic",
+        "Built dual pricing computation engine supporting Hourly and OPEX models"
+      ]
+    }
+  ],
+  "skills": {
+    "Languages & Frameworks": ["PHP", "Laravel", "Node.js", "NestJS", "TypeScript", "JavaScript"],
+    "Databases": ["PostgreSQL", "MySQL", "Prisma ORM", "pgvector"],
+    "AI & Search": ["OpenAI GPT-4o Mini", "GPT-4.1 Mini", "LLM-to-SQL", "Semantic Search", "Vector Embeddings"],
+    "Caching & Queues": ["Redis", "Laravel Horizon", "Async Job Processing"],
+    "Architecture": ["Multi-Tenant SaaS", "REST APIs", "Domain-Driven Design", "Microservices", "Service-Repository Pattern"],
+    "DevOps": ["AWS", "Docker", "Git", "CI/CD", "Cloudflare"],
+    "Integrations": ["Acumatica ERP", "Payment Gateways", "Shipping APIs", "SendGrid", "Klaviyo"]
+  },
+  "education": {
+    "degree": "B.Tech in Mechanical Engineering",
+    "university": "Dr. A.P.J. Abdul Kalam Technical University",
+    "period": "2015 – 2019"
+  },
+  "stats": [
+    { "label": "Years of Experience", "value": "5+" },
+    { "label": "Production Systems Shipped", "value": "3" },
+    { "label": "Records Processed", "value": "20M+" },
+    { "label": "API Latency Reduction", "value": "35%" },
+    { "label": "API Integrations", "value": "20+" },
+    { "label": "Languages Supported", "value": "7" }
+  ]
+}

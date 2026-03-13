@@ -1,0 +1,51 @@
+{
+  "slug": "multi-vendor-ecommerce",
+  "title": "Multi-Vendor Healthcare E-Commerce Platform",
+  "subtitle": "Cross-Border Marketplace with ERP Integration",
+  "thumbnail": "/images/projects/ecommerce-thumb.png",
+  "tags": ["Laravel", "Acumatica ERP", "Multi-Vendor", "7 Languages", "20+ APIs"],
+  "featured": true,
+  "order": 3,
+  "overview": "Cross-border multi-vendor marketplace with intelligent vendor matching, ERP integration, and 20+ third-party API orchestrations.",
+  "architectureHighlights": [
+    "Intelligent vendor matching (proximity + commission ranking)",
+    "Full Acumatica ERP integration (inventory, orders, pricing)",
+    "20+ third-party API orchestration with retry logic",
+    "Cross-border operations (US + Canada) in 7 languages",
+    "Multi-carrier shipping (ICS, Purolator, USPS)"
+  ],
+  "impactMetrics": [
+    { "metric": "Countries served", "result": "2" },
+    { "metric": "Languages supported", "result": "7" },
+    { "metric": "Third-party APIs integrated", "result": "20+" },
+    { "metric": "Shipping carriers", "result": "3+" },
+    { "metric": "Invalid signup reduction", "result": "18%" },
+    { "metric": "ERP sync", "result": "Real-time" }
+  ],
+  "caseStudy": {
+    "problem": "Healthcare supply businesses operating across US and Canada needed a unified e-commerce platform handling multi-vendor catalogs, cross-border logistics, and ERP-synced inventory — while ensuring customers always get products from the nearest, most cost-effective vendor.",
+    "solution": "Designed and built a multi-vendor marketplace serving two countries in 7 languages, with an intelligent vendor matching engine factoring proximity and commission rates, fully integrated with Acumatica ERP.",
+    "myRole": [
+      "Led the full backend architecture design (Laravel/PHP)",
+      "Architected and built the ERP integration layer (Acumatica)",
+      "Designed the vendor matching algorithm (proximity + commission logic)",
+      "Orchestrated 20+ third-party API integrations"
+    ],
+    "architecture": "graph TD\n    A[Customer Search] --> B[Product Discovery Engine]\n    B --> C{Vendor Matching Logic}\n    C --> |Nearest Location| D[Geo-Proximity Check]\n    C --> |Product Available| E[Inventory Check via ERP]\n    C --> |Best Commission| F[Commission Ranking]\n    D & E & F --> G[Optimal Vendor Selected]\n    G --> H[Order Processing]\n    H --> I[Acumatica ERP Sync]\n    H --> J[Shipping - ICS / Purolator / USPS]\n    H --> K[Payment Processing]\n    L[Vendor Portal] --> M[Product Upload]\n    M --> N[Catalog Sync]\n    N --> O[Google Merchant Center]\n    N --> P[Facebook / Instagram Shops]",
+    "technicalDecisions": [
+      { "decision": "Laravel monolith with service layer", "reasoning": "Complex ERP integration benefits from unified codebase" },
+      { "decision": "Proximity-first vendor matching", "reasoning": "Customer experience prioritized — faster shipping" },
+      { "decision": "Acumatica as inventory source of truth", "reasoning": "Vendors manage stock in ERP; platform syncs in near real-time" },
+      { "decision": "Multi-language at application layer", "reasoning": "Laravel i18n system across US/Canada (7 languages)" },
+      { "decision": "API orchestration layer", "reasoning": "Centralized service layer with retry logic and failure handling" }
+    ],
+    "challenges": [
+      "Vendor matching algorithm — Proximity + commission ranking with real-time inventory checks via ERP.",
+      "ERP integration depth — Two-way Acumatica sync with conflict resolution.",
+      "20+ API orchestration — Each with different auth, rate limits, and failure modes.",
+      "Cross-border complexity — Different tax rules, carriers, currency, compliance (US vs Canada).",
+      "Multi-language support — 7 languages across all customer-facing content and transactional messages."
+    ],
+    "techStack": ["Laravel", "PHP", "PostgreSQL", "Acumatica ERP", "Klaviyo", "SendGrid", "Google Merchant Center", "USPS", "Purolator", "Redis", "Multi-Language (i18n)"]
+  }
+}

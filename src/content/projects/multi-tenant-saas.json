@@ -1,0 +1,49 @@
+{
+  "slug": "multi-tenant-saas",
+  "title": "Multi-Tenant Business Management SaaS",
+  "subtitle": "End-to-End Platform for Trade Businesses",
+  "thumbnail": "/images/projects/saas-thumb.png",
+  "tags": ["NestJS", "PostgreSQL", "Multi-Tenant", "RBAC", "Subscription Engine"],
+  "featured": true,
+  "order": 1,
+  "overview": "Full-stack SaaS platform replacing fragmented CRM, estimation, scheduling, and invoicing tools for trade businesses.",
+  "architectureHighlights": [
+    "Multi-tenant SaaS architecture with row-level PostgreSQL isolation",
+    "30+ modular NestJS domain architecture",
+    "Dual pricing computation engine (Hourly & OPEX models)",
+    "Subscription enforcement via interceptors",
+    "Snapshot-based audit model for financial integrity"
+  ],
+  "impactMetrics": [
+    { "metric": "Organizations supported", "result": "100–150" },
+    { "metric": "Users per organization", "result": "~10" },
+    { "metric": "Feature modules built", "result": "14+" },
+    { "metric": "Modular domains structured", "result": "30+" },
+    { "metric": "Daily estimates per org", "result": "3–5" },
+    { "metric": "Pricing models supported", "result": "2 (Hourly & OPEX)" }
+  ],
+  "caseStudy": {
+    "problem": "Trade businesses rely on 4-5 disconnected tools for CRM, estimation, scheduling, and invoicing — causing duplicate data entry, poor workflow visibility, and manual coordination across teams.",
+    "solution": "Designed and built a unified multi-tenant SaaS platform that manages the entire business lifecycle from lead capture to job completion and invoicing.",
+    "myRole": [
+      "Led architecture design and backend development",
+      "Designed multi-tenant data isolation strategy",
+      "Built the advanced estimation engine",
+      "Implemented RBAC and subscription plan enforcement"
+    ],
+    "architecture": "graph TD\n    A[Client App] --> B[API Gateway / NestJS]\n    B --> C[Auth Module - JWT + RBAC]\n    B --> D[Tenant Middleware]\n    D --> E[CRM Module]\n    D --> F[Estimation Engine]\n    D --> G[Job & Work Order Module]\n    D --> H[Scheduling Module]\n    D --> I[Invoicing Module]\n    D --> J[Subscription Module]\n    E --> K[(PostgreSQL - Tenant Isolated)]\n    F --> K\n    G --> K\n    H --> K\n    I --> K\n    J --> K",
+    "technicalDecisions": [
+      { "decision": "Row-level tenant isolation (PostgreSQL)", "reasoning": "Simpler ops than schema-per-tenant at 100-150 org scale" },
+      { "decision": "Modular NestJS architecture", "reasoning": "Each domain is an independent module — microservice-ready" },
+      { "decision": "Middleware-based tenant resolution", "reasoning": "Every request passes through tenant context middleware" },
+      { "decision": "Subscription enforcement layer", "reasoning": "Interceptors check seat limits and feature access before processing" }
+    ],
+    "challenges": [
+      "Estimation engine complexity — Surface-based calculations with variable dimensions, coat counts, productivity rates, and material costs. Built a flexible formula engine supporting manual overrides.",
+      "Multi-tenant data isolation — Zero data leakage between 100+ organizations while keeping query performance fast.",
+      "RBAC at scale — Granular permissions across 14+ modules with role inheritance.",
+      "Subscription enforcement — Runtime checks for seat limits, feature gating, and plan upgrades without disrupting active users."
+    ],
+    "techStack": ["NestJS", "Node.js", "PostgreSQL", "JWT", "RBAC", "Multi-Tenant Architecture", "Modular Monolith", "Prisma"]
+  }
+}

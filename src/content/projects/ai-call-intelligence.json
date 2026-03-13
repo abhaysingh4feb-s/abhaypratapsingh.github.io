@@ -1,0 +1,51 @@
+{
+  "slug": "ai-call-intelligence",
+  "title": "AI Call Intelligence Platform",
+  "subtitle": "AI-Powered Analytics for Enterprise Call Data",
+  "thumbnail": "/images/projects/ai-thumb.png",
+  "tags": ["NestJS", "PostgreSQL", "pgvector", "OpenAI", "Redis", "LLM Pipeline"],
+  "featured": true,
+  "order": 2,
+  "overview": "AI-powered analytics engine processing 20M+ call records with LLM-to-SQL pipelines, vector search, and natural language querying.",
+  "architectureHighlights": [
+    "LLM-to-SQL pipeline converting natural language to PostgreSQL",
+    "pgvector semantic search over millions of transcript embeddings",
+    "Dual-LLM architecture (GPT-4o Mini for SQL, GPT-4.1 Mini for synthesis)",
+    "Redis caching with ~60% latency improvement",
+    "Prompt injection prevention and query sandboxing"
+  ],
+  "impactMetrics": [
+    { "metric": "Call records processed", "result": "20M+" },
+    { "metric": "p95 response time", "result": "Sub-10 seconds" },
+    { "metric": "Latency improvement", "result": "~60% via caching" },
+    { "metric": "Query interface", "result": "Natural language → SQL" },
+    { "metric": "Search type", "result": "Semantic (vector embeddings)" }
+  ],
+  "caseStudy": {
+    "problem": "Enterprise organizations generate millions of call records and transcripts but lack ability to extract actionable insights without dedicated data analysts writing SQL queries.",
+    "solution": "Architected an AI analytics backend processing 20M+ call records, enabling natural language querying through an LLM-to-SQL pipeline and semantic search over transcript embeddings.",
+    "myRole": [
+      "Architected the full AI analytics backend (NestJS)",
+      "Designed and built the LLM-to-SQL pipeline (GPT-4o Mini)",
+      "Implemented pgvector semantic search layer",
+      "Integrated GPT-4.1 Mini for response synthesis",
+      "Engineered Redis caching strategy for sub-10s response times"
+    ],
+    "architecture": "graph TD\n    A[User Natural Language Query] --> B[NestJS API Layer]\n    B --> C[LLM-to-SQL Engine - GPT-4o Mini]\n    C --> D[Query Validation & Sanitization]\n    D --> E[PostgreSQL - 20M+ Records]\n    E --> F[Raw Query Results]\n    F --> G[Response Synthesis - GPT-4.1 Mini]\n    G --> H[Structured Analytical Summary]\n    A --> I{Query Type Router}\n    I --> |Semantic Search| J[Embedding Generation]\n    J --> K[pgvector Similarity Search]\n    K --> G\n    B --> L[Redis Cache Layer]\n    L --> |Cache Hit| H",
+    "technicalDecisions": [
+      { "decision": "GPT-4o Mini for SQL generation", "reasoning": "Cost-effective for high-volume query translation" },
+      { "decision": "GPT-4.1 Mini for response synthesis", "reasoning": "Better at structured, human-readable summaries" },
+      { "decision": "pgvector over dedicated vector DB", "reasoning": "Keeps everything in PostgreSQL — no extra infra" },
+      { "decision": "Redis caching strategy", "reasoning": "Repeated analytical queries served from cache" },
+      { "decision": "Query validation layer", "reasoning": "Prevents prompt injection; ensures authorized data access" }
+    ],
+    "challenges": [
+      "LLM-to-SQL accuracy — Schema-aware prompt engineering, query validation, and fallback handling.",
+      "Scale at 20M+ records — Composite indexing, query planning, and pagination.",
+      "Semantic search over transcripts — Generating/storing embeddings for millions of transcripts.",
+      "Prompt injection prevention — Input sanitization, query whitelisting, output validation.",
+      "Response time at scale — Sub-10s p95 via Redis caching and query optimization."
+    ],
+    "techStack": ["NestJS", "TypeScript", "PostgreSQL", "pgvector", "OpenAI GPT-4o Mini", "GPT-4.1 Mini", "Redis", "Vector Embeddings", "Semantic Search"]
+  }
+}
