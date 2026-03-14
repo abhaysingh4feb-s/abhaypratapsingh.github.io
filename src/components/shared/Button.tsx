@@ -34,6 +34,13 @@ export default function Button({
   }
 
   if (href) {
+    if (href.endsWith(".pdf")) {
+      return (
+        <a href={href} className={classes}>
+          {children}
+        </a>
+      );
+    }
     return (
       <Link href={href} className={classes}>
         {children}
