@@ -13,7 +13,7 @@ export function generatePersonJsonLd() {
       "Senior Backend Engineer and Team Lead with 5+ years of experience building scalable multi-tenant SaaS platforms and AI-integrated systems.",
     url: siteConfig.url,
     email: `mailto:${siteConfig.email}`,
-    image: `${siteConfig.url}/og-image.png`,
+    image: `${siteConfig.url}/opengraph-image`,
     address: {
       "@type": "PostalAddress",
       addressCountry: "IN",
@@ -117,7 +117,7 @@ export function generateBlogPostingJsonLd(post: {
     description: post.excerpt,
     datePublished: post.date,
     dateModified: post.date,
-    image: `${siteConfig.url}/og-image.png`,
+    image: `${siteConfig.url}/opengraph-image`,
     author: {
       "@type": "Person",
       "@id": `${siteConfig.url}/#person`,

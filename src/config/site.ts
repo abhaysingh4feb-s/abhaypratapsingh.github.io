@@ -8,7 +8,7 @@ export const siteConfig = {
   github: "https://github.com/abhaysingh4feb-s",
   email: "abhaysingh4feb@gmail.com",
   location: "India",
-  ogImage: "/og-image.png",
+  ogImage: "/opengraph-image",
   keywords: [
     "Abhay Pratap Singh",
     "Senior Backend Engineer",
