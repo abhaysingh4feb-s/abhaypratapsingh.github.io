@@ -72,8 +72,8 @@ export function generateProfilePageJsonLd() {
     mainEntity: {
       "@id": `${siteConfig.url}/#person`,
     },
-    dateCreated: "2025-03-12",
-    dateModified: new Date().toISOString().split("T")[0],
+    dateCreated: "2025-03-12T00:00:00+05:30",
+    dateModified: new Date().toISOString(),
   };
 }
 
