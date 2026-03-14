@@ -151,12 +151,12 @@ export default function CodeSamples() {
         <AnimateOnScroll>
           <div className="max-w-4xl mx-auto">
             {/* Tab bar */}
-            <div className="flex gap-1 p-1 bg-[var(--bg-primary)] rounded-xl border border-[var(--card-border)] overflow-x-auto">
+            <div className="flex gap-1 p-1 bg-[var(--bg-primary)] rounded-xl border border-[var(--card-border)] overflow-x-auto scrollbar-hide">
               {codeSamples.map((sample, i) => (
                 <button
                   key={sample.filename}
                   onClick={() => setActiveTab(i)}
-                  className={`flex-1 min-w-0 px-4 py-2.5 text-xs font-medium rounded-lg transition-all whitespace-nowrap ${
+                  className={`flex-shrink-0 px-4 py-2.5 text-xs font-medium rounded-lg transition-all whitespace-nowrap ${
                     activeTab === i
                       ? "bg-blue-500/10 text-blue-500 border border-blue-500/20"
                       : "text-[var(--text-secondary)] hover:text-[var(--text-primary)]"

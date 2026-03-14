@@ -12,11 +12,11 @@
       "role": "Tech Lead",
       "period": "Nov 2025 – Present",
       "highlights": [
-        "Leading architecture decisions and technical direction across multiple products",
-        "Driving engineering standards, code review culture, and sprint planning",
-        "Mentoring developers and conducting technical interviews",
-        "Designing AI-powered analytics systems with LLM-to-SQL pipelines and vector search",
-        "Owning cross-functional collaboration with overseas stakeholders and product teams"
+        "Leading architecture and technical direction for Multi-Tenant Business Management SaaS serving 200+ organizations",
+        "Architected row-level PostgreSQL tenant isolation with RBAC and subscription-based feature gating",
+        "Designed 30+ modular NestJS domains with domain-driven design and service-repository pattern",
+        "Driving engineering standards, code review culture, and sprint planning across cross-functional teams",
+        "Owning stakeholder collaboration with overseas product teams for roadmap and delivery alignment"
       ]
     },
     {
@@ -38,11 +38,11 @@
       "role": "Software Developer",
       "period": "Apr 2021 – Apr 2025",
       "highlights": [
-        "Built multi-tenant SaaS platform with row-level PostgreSQL isolation serving 100+ organizations",
-        "Designed and implemented 30+ modular NestJS domains with RBAC and subscription enforcement",
-        "Developed multi-vendor healthcare e-commerce platform spanning US and Canada in 7 languages",
-        "Orchestrated 20+ third-party API integrations including Acumatica ERP with retry logic",
-        "Built dual pricing computation engine supporting Hourly and OPEX models"
+        "Developed Multi-Vendor Healthcare E-Commerce Platform spanning US and Canada in 7 languages",
+        "Built multi-vendor catalog system with vendor-specific pricing, inventory, and order routing",
+        "Orchestrated 20+ third-party API integrations including Acumatica ERP with retry logic and circuit breakers",
+        "Implemented dual pricing computation engine supporting Hourly and OPEX billing models",
+        "Integrated Stripe and Ebiz payment gateways with subscription and one-time purchase flows"
       ]
     }
   ],
@@ -52,7 +52,7 @@
     "AI & Search": ["OpenAI GPT-4o Mini", "GPT-4.1 Mini", "LLM-to-SQL", "Semantic Search", "Vector Embeddings"],
     "Caching & Queues": ["Redis", "Laravel Horizon", "Async Job Processing"],
     "Architecture": ["Multi-Tenant SaaS", "REST APIs", "Domain-Driven Design", "Microservices", "Service-Repository Pattern"],
-    "DevOps": ["AWS", "Docker", "Git", "CI/CD", "Cloudflare"],
+    "DevOps": ["AWS", "S3", "Docker", "Git", "CI/CD", "Cloudflare"],
     "Integrations & APIs": ["Acumatica ERP", "Stripe", "Ebiz", "Twilio", "Google Maps", "Google Merchant Center", "Google Search Console", "Honeypot"],
     "Email & Marketing": ["Postmark", "SendGrid", "Klaviyo", "HubSpot", "BounceBan"],
     "Project Management": ["Jira", "ClickUp", "Bitrix24"]
