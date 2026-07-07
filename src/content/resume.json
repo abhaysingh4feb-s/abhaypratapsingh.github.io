@@ -40,7 +40,7 @@
       "highlights": [
         "Developed Multi-Vendor Healthcare E-Commerce Platform spanning US and Canada in 7 languages",
         "Built multi-vendor catalog system with vendor-specific pricing, inventory, and order routing",
-        "Orchestrated 20+ third-party API integrations including Acumatica ERP with retry logic and circuit breakers",
+        "Orchestrated 25+ third-party API integrations including Acumatica ERP with retry logic and circuit breakers",
         "Implemented dual pricing computation engine supporting Hourly and OPEX billing models",
         "Integrated Stripe and Ebiz payment gateways with subscription and one-time purchase flows"
       ]
@@ -67,7 +67,7 @@
     { "label": "Production Systems Shipped", "value": "3" },
     { "label": "Records Processed", "value": "20M+" },
     { "label": "API Latency Reduction", "value": "35%" },
-    { "label": "API Integrations", "value": "20+" },
+    { "label": "Third-party API Integrations", "value": "25+" },
     { "label": "Languages Supported", "value": "7" }
   ]
 }

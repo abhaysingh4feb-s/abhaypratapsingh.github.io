@@ -1,5 +1,5 @@
 ---
-title: "Orchestrating 20+ Third-Party APIs Without Losing Your Mind"
+title: "Orchestrating 25+ Third-Party APIs Without Losing Your Mind"
 slug: "third-party-api-orchestration"
 date: "2025-08-05"
 tags: ["Architecture", "Laravel", "APIs", "Integration", "Redis"]
@@ -9,7 +9,7 @@ published: true
 ogImage: "/images/blog/api-orchestration-og.png"
 ---
 
-## The Problem with 20+ APIs
+## The Problem with 25+ third-party APIs
 
 The e-commerce platform I worked on processed orders across multiple countries, each with its own shipping carriers, tax systems, payment gateways, and regulatory requirements. By the time we were done, the system integrated with over 20 third-party APIs:
 
@@ -362,7 +362,7 @@ Note the explicit login/logout per batch. Acumatica sessions are heavyweight res
 
 ## Logging and Monitoring
 
-With 20+ APIs, you need visibility into what is happening across the entire integration surface. Every outbound request is logged with a correlation ID that ties it back to the originating user action.
+With 25+ third-party APIs, you need visibility into what is happening across the entire integration surface. Every outbound request is logged with a correlation ID that ties it back to the originating user action.
 
 ```typescript
 interface ApiCallLog {
